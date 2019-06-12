@@ -8,7 +8,7 @@
 </template>
 
 <script>
-let timeoutId;
+let timeoutId
 
 export default {
   name: 'SearchInput',
@@ -21,10 +21,10 @@ export default {
   },
   methods: {
     emitOnDebounce(value) {
-      clearTimeout(timeoutId);
+      clearTimeout(timeoutId)
       timeoutId = setTimeout(() => {
-        this.$emit('text', value);
-      }, 500);
+        this.$emit('text', value)
+      }, 500)
     },
   },
 };

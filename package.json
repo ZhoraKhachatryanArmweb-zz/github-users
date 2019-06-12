@@ -1,5 +1,5 @@
 {
-  "name": "my",
+  "name": "Github-users",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
+    "vuetify": "^1.5.14",
     "vuex": "^3.1.1"
   },
   "devDependencies": {

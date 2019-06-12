@@ -13,7 +13,7 @@ export default {
       if (!response.ok) throw response
       return response.json()
     } 
-    catch (exception) { // Ignore any possible errors
+    catch (exception) {
       console.log(exception)
       return []
     }
@@ -24,7 +24,7 @@ export default {
       if (!response.ok) throw response
       return response.json()
     } 
-    catch (exception) { // Ignore any possible errors
+    catch (exception) {
       console.log(exception)
       return []
     }

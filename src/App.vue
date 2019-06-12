@@ -27,7 +27,7 @@ export default {
   name: 'app',
   methods : {
     handleSearchUser(username) {
-      this.$store.dispatch('SEARCH_USERS', username);
+      this.$store.dispatch('SEARCH_USERS', username)
     },
     getUser(userId) {
       this.$store.dispatch('GET_USER_ID', userId)

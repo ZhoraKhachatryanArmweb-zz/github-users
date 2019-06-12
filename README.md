@@ -1,4 +1,4 @@
-# my
+# Github users
 
 ## Project setup
 ```

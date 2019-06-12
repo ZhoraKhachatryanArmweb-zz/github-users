@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import Vue from 'vue'
 
 export default {
   SET_USERS(state, users) {
@@ -10,11 +10,11 @@ export default {
         name: i.login,
         avatar: i.avatar_url,
         reposUrl: i.repos_url
-      }));
+      }))
     }
-    Vue.set(state, 'users', userNames);
+    Vue.set(state, 'users', userNames)
   },
-  SET_USER_REPO(state, repository) {
-    Vue.set(state, 'activeUser', repository);
+  SET_USER_ID(state, repository) {
+    Vue.set(state, 'activeUser', repository)
   },
 };
