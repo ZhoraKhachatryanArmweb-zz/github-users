@@ -1,18 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img alt="Vue logo" class="logo" src="./assets/logo.png">
+    <img alt="github logo" class="logo" src="./assets/github.png">
     <Main msg="Welcome to Your Vue.js App"/>
-    <search-input
-      placeholder="Type a GitHub username"
-      @text="handleSearchUser"
-    />
-    <users-list
-      :users="users"
-      @user="userId => getUser(userId)"
-    />
-    <user-card
-      :activeUser = "activeUser"
-    />
+    <v-app id="inspire">
+    <v-container grid-list-md text-xs-center>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card dark color="primary">
+              <v-card-text class="px-0">
+                <search-input
+                  placeholder="Type a GitHub username"
+                  @text="handleSearchUser"
+                />
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex xs6>
+            <v-card dark color="secondary">
+              <v-card-text class="px-0">
+                <users-list
+                  :users="users"
+                  @user="userId => getUser(userId)"
+                />
+              </v-card-text>
+            </v-card>
+          </v-flex>
+          <v-flex xs6>
+            <v-card dark color="secondary">
+              <v-card-text class="px-0">
+                <user-card
+                  :activeUser = "activeUser"
+                />
+              </v-card-text>
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-app>
   </div>
 </template>
 
@@ -51,5 +76,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.logo {
+  width:150px;
 }
 </style>
