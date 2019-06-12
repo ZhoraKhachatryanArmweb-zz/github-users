@@ -33,6 +33,9 @@ export default {
 <style scoped>
 input {
   background-color: #fff;
-  color:#000;
+  color:#000;   
+  height: 30px;
+  padding: 10px;
+  border-radius: 10px;
 }
 </style>

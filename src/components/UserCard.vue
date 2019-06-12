@@ -1,18 +1,18 @@
 <template>
-  <v-layout>
+  <v-layout v-if="Object.keys(activeUser).length !== 0">
     <v-flex xs12 sm6 offset-sm3>
       <v-card>
         <v-img
-          v-bind:src="avatar"
+          :src="activeUser.avatar_url"
         ></v-img>
         <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">{{name}}</h3>
+            <h3 class="headline mb-0">{{activeUser.name}}</h3>
             <ul>
-              <li>Company: {{company}}</li>
-              <li>Followers: {{followers}}</li>
-              <li>Following: {{following}}</li>
-              <li>Repos: {{repos}}</li>
+              <li>Company: {{activeUser.company}}</li>
+              <li>Followers: {{activeUser.followers}}</li>
+              <li>Following: {{activeUser.following}}</li>
+              <li>Repos: {{activeUser.public_repos}}</li>
             </ul>
           </div>
         </v-card-title>
@@ -24,39 +24,16 @@
 <script>
 export default {
   name: 'UserCard',
-  data: function () {
-    return {
-      name,
-      company: '',
-      avatar: '',
-      followers: null,
-      following: null,
-      repos: null,
-    }
-  },
   props: {
     activeUser: {
       type: Object,
-      required: false,
-      default: () => ([]),
+      required: true,
     },
   },
-  watch: {
-    activeUser: {
-      handler(value, oldValue) {
-        this.name = value.name
-        this.company = value.company
-        this.avatar = value.avatar_url
-        this.followers = value.followers
-        this.following = value.following
-        this.repos = value.public_repos
-      }
-    }
-  }
 };
 </script>
 
-<style scoped>
+<style>
 ul {
   list-style: none;
 }

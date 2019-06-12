@@ -48,6 +48,7 @@ import SearchInput from '@/components/SearchInput.vue'
 import UsersList from '@/components/UsersList.vue'
 import UserCard from '@/components/UserCard.vue'
 import { mapState } from 'vuex'
+
 export default {
   name: 'app',
   methods : {

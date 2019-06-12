@@ -1,10 +1,9 @@
 <template>
   <div>
-    <div v-for="user in users" v-bind:key="user.id">
+    <div class="user" v-for="user in users" :key="user.id">
       <div @click="sendUserId(user.id)">
-        {{user.name}}
-        <img v-bind:src="user.avatar">
-        {{user.reposUrl}}
+        <img :src="user.avatar">
+        <div>{{user.name}}</div>
       </div>
     </div>
   </div>
@@ -29,7 +28,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
+.user {
+  margin:10px;
+}
+.user:hover {
+  cursor: pointer;
+  opacity:0.8;
+}
 img {
   width:100px;
 }
