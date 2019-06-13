@@ -21,7 +21,7 @@ export default {
   props: {
     users: {
       type: Array,
-      required: false,
+      required: true,
       default: () => ([]),
     },
   },
