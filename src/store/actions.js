@@ -17,4 +17,4 @@ export default {
     commit('SET_USER_ID', data)
     return data
   },
-};
+}

@@ -17,4 +17,4 @@ export default {
   SET_USER_ID(state, repository) {
     Vue.set(state, 'activeUser', repository)
   },
-};
+}
